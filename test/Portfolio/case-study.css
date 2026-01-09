@@ -1,0 +1,197 @@
+/* --- case-study.css --- */
+
+/* Hero Section */
+.cs-hero {
+    text-align: center;
+    padding-top: 60px;
+    background-color: #fafafa;
+}
+
+.cs-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+.cs-tag {
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: #666;
+    margin-bottom: 15px;
+    display: block;
+}
+
+.cs-hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    line-height: 1.1;
+}
+
+.cs-subtitle {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+/* Meta Grid (Role, Timeline, Tools) */
+.cs-meta-grid {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 60px;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 30px 0;
+}
+
+.meta-item h4 {
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.meta-item p {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #000;
+}
+
+/* Hero Image */
+.cs-hero-image {
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.cs-hero-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* Body Content */
+.cs-body {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 80px 5%;
+}
+
+.cs-section {
+    margin-bottom: 100px;
+}
+
+.cs-section h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #000;
+}
+
+.cs-section p {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.cs-list {
+    margin-bottom: 40px;
+    padding-left: 20px;
+}
+
+.cs-list li {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+/* Image Placeholders & Grids */
+.cs-image-block {
+    margin: 40px 0;
+}
+
+.cs-image-block img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.placeholder-box {
+    width: 100%;
+    height: 300px;
+    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+    font-weight: 500;
+    border-radius: 12px;
+    border: 2px dashed #ccc;
+}
+
+.caption {
+    display: block;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.cs-grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Stats Section */
+.cs-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.stat-box {
+    background: #fafafa;
+    padding: 30px;
+    border-radius: 12px;
+    flex: 1;
+    text-align: center;
+}
+
+.stat-box strong {
+    display: block;
+    font-size: 2.5rem;
+    color: #d0021b;
+    margin-bottom: 5px;
+}
+
+/* Footer Nav */
+.cs-footer-nav {
+    margin-top: 100px;
+    border-top: 1px solid #eee;
+    padding-top: 40px;
+}
+
+.cs-footer-nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #000;
+    font-size: 1.2rem;
+}
+
+.cs-footer-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .cs-hero h1 { font-size: 2.5rem; }
+    .cs-meta-grid { flex-direction: column; gap: 20px; text-align: center; }
+    .cs-grid-2 { grid-template-columns: 1fr; }
+    .cs-stats { flex-direction: column; }
+}
