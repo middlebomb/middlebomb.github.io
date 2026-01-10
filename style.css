@@ -281,52 +281,66 @@ h1 strong {
     background-color: #111;
 }
 
-/* 2. Mobile View Styles */
+/* --- MOBILE RESPONSIVENESS & HAMBURGER --- */
 @media (max-width: 768px) {
     
-    /* Show the hamburger icon */
+    /* 1. Show the hamburger icon */
     .hamburger {
         display: block;
-        z-index: 1001; /* Stays on top of the menu */
+        z-index: 2000; /* Ensure it stays on TOP of the white menu */
     }
 
-    /* Hide the hamburger bar inside nav-links if any */
+    /* 2. Style the Menu Sidebar */
     .nav-links {
+        /* Essential for vertical stacking */
+        display: flex; 
+        flex-direction: column; 
+        
+        /* Positioning */
         position: fixed;
         top: 0;
-        right: -100%; /* Hidden off-screen to the right */
-        height: 100vh; /* Full screen height */
-        width: 70%;    /* Width of the sidebar */
+        right: -100%; /* Hidden by default */
+        height: 100vh;
+        width: 100%; /* Full width looks better on mobile than 70% */
         background-color: #ffffff;
-        flex-direction: column; /* Stack links vertically */
+        
+        /* Centering the text */
         justify-content: center;
         align-items: center;
-        box-shadow: -5px 0 15px rgba(0,0,0,0.1);
-        transition: 0.4s ease; /* Smooth slide effect */
+        
+        /* Styling */
+        gap: 50px; /* Space between the links */
+        transition: 0.4s ease;
         z-index: 1000;
-        gap: 40px; /* Space between links */
     }
 
-    /* Increase font size for mobile menu */
+    /* 3. Style the Links inside the menu */
     .nav-links a {
-        font-size: 1.5rem;
-        margin-left: 0;
+        font-size: 2rem; /* Make text bigger */
+        margin-left: 0;  /* Remove desktop margin */
+        color: #000;
+        font-weight: 600;
     }
 
-    /* Class added by JavaScript to show menu */
+    /* 4. Slide in class (Added by JS) */
     .nav-links.active {
-        right: 0; /* Slides into view */
+        right: 0;
     }
 
-    /* --- Hamburger Animation (Turns into X) --- */
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0; /* Hide middle bar */
-    }
-
+    /* --- Hamburger to 'X' Animation --- */
+    /* This turns the 3 lines into an X when clicked */
+    
+    /* Rotate top bar */
     .hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
     }
 
+    /* Hide middle bar */
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    /* Rotate bottom bar */
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
     }
