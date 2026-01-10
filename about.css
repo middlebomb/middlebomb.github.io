@@ -1,0 +1,84 @@
+/* --- about.css --- */
+
+/* Main Container for Skills & Experience */
+.about-details {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 100px 5%;
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    margin-bottom: 100px;
+}
+
+/* Columns */
+.detail-column {
+    flex: 1;
+}
+
+/* Headings (Capabilities / Experience) */
+.detail-column h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #000;
+    padding-bottom: 15px;
+    display: inline-block;
+}
+
+/* Skills List Styling */
+.skill-list {
+    list-style: none;
+}
+
+.skill-list li {
+    font-size: 1.1rem;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+/* Experience Item Styling */
+.experience-item {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: flex-start;
+}
+
+.year {
+    width: 150px;
+    font-size: 1rem;
+    color: #666;
+    font-weight: 500;
+    flex-shrink: 0; /* Prevents year from squishing */
+}
+
+.role-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.role-info strong {
+    font-size: 1.1rem;
+    margin-bottom: 5px;
+    color: #000;
+}
+
+.role-info span {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Mobile Responsiveness for About Page */
+@media (max-width: 768px) {
+    .about-details {
+        flex-direction: column;
+        gap: 60px;
+        padding-top: 50px;
+    }
+    
+    .year {
+        width: 100px; /* Smaller width for year on mobile */
+        font-size: 0.9rem;
+    }
+}
