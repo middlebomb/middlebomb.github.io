@@ -1,0 +1,157 @@
+/* --- others.css --- */
+
+/* Hero Section */
+.others-hero {
+    text-align: center;
+    padding: 80px 5%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.others-hero h1 {
+    font-size: 3rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.others-hero p {
+    font-size: 1.125rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Grid Layout */
+.others-grid {
+    display: grid;
+    /* Creates columns that automatically fit the screen size */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 5% 100px 5%;
+}
+
+/* Generic Card Styles */
+.grid-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 350px; /* Fixed height for uniformity */
+    display: block;
+}
+
+.grid-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* --- Image Card Styles --- */
+.image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+/* Zoom effect on hover */
+.image-card:hover img {
+    transform: scale(1.05);
+}
+
+.card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.card-overlay h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.card-overlay span {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* --- Text Card Styles --- */
+.text-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.card-content {
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.card-content p {
+    font-size: 1rem;
+    margin-bottom: 25px;
+    line-height: 1.5;
+}
+
+.link-arrow {
+    font-weight: 600;
+    font-size: 0.9rem;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+}
+
+/* Dark Text Card Theme */
+.text-card.dark {
+    background-color: #111;
+    color: #fff;
+}
+
+.text-card.dark p {
+    color: #aaa;
+}
+
+/* Light Text Card Theme */
+.text-card.light {
+    background-color: #f4f4f4;
+    color: #111;
+}
+
+.text-card.light p {
+    color: #555;
+}
+
+/* Wide Card (Spans 2 columns on large screens) */
+@media (min-width: 768px) {
+    .wide {
+        grid-column: span 2;
+    }
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .others-hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .others-grid {
+        grid-template-columns: 1fr; /* Single column on mobile */
+    }
+    
+    .wide {
+        grid-column: span 1;
+    }
+}
