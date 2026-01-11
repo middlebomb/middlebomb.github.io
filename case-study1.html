@@ -141,11 +141,33 @@
                 <li>Aligning findings through discussions with internal stakeholders</li>
             </ul>
             <p>Low-fidelity explorations were used internally to validate flow logic, followed by <strong>high-fidelity mockups</strong> to communicate decisions clearly across teams.</p>
-            <div class="cs-image-block full-width">
-                <!-- Replace with your final UI Shot -->
-                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop" alt="High Fidelity UI">
-                <span class="caption">Final Dashboard UI</span>
+
+            <!-- User Flow & System Design Sub-Section -->
+            <h3 style="font-size: 1.5rem; margin-top: 50px; margin-bottom: 30px; font-weight: 600;">User Flow & System Design</h3>
+            
+            <!-- 2x2 Grid for 4 Flow/Design Images -->
+            <div class="cs-grid-2x2">
+                <div class="cs-image-block clickable">
+                    <img src="images/casestudyphoto/casestudy1/content/userflow/global userflow.png" alt="Global User Flow">
+                    <span class="caption">Global User Flow</span>
+                </div>
+                <div class="cs-image-block clickable">
+                    <img src="images/casestudyphoto/casestudy1/content/userflow/ticket_detail.png" alt="Ticket Detail">
+                    <span class="caption">Ticket Detail</span>
+                </div>
+                <div class="cs-image-block clickable">
+                    <img src="images/casestudyphoto/casestudy1/content/userflow/ticket_escalation.png" alt="Ticket Escalation">
+                    <span class="caption">Ticket Escalation</span>
+                </div>
+                <div class="cs-image-block clickable">
+                    <img src="images/casestudyphoto/casestudy1/content/userflow/ticket_mention.png" alt="Ticket Mention">
+                    <span class="caption">Ticket Mention</span>
+                </div>
             </div>
+
+            <p>
+                This user flow illustrates how BPP manages authentication, ticket lifecycle, escalation, and cross-organization collaboration between partners and Telkomsel with clear ownership and SLA-driven workflows.
+            </p>
         </section>
 
         <!-- 5. Prototyping & Visual Design -->
@@ -173,6 +195,29 @@
                 </div>
             </div>
             
+            <!-- Large mockup for dashboard / ticket list -->
+                <div class="cs-mockup-large">
+                    <div class="mockup-wrapper">
+                        <h3 class="mockup-title">Dashboard & Ticket List</h3>
+                        <div class="mockup-box clickable cs-image-block">
+                            <!-- Replace src with your mockup image -->
+                            <img src="images/casestudyphoto/casestudy1/content/Mockup_full.jpg" alt="Dashboard Mockup">
+                        </div>
+                        <span class="mockup-caption">Overview of dashboard and ticket list</span>
+                    </div>
+                </div>
+
+            <!-- Large mockup for mention feature -->
+            <div class="cs-mockup-large">
+                <div class="mockup-wrapper">
+                    <h3 class="mockup-title">Ticket Mention</h3>
+                    <div class="mockup-box clickable cs-image-block">
+                        <img src="images/casestudyphoto/casestudy1/content/Frame_mention.jpg" alt="Ticket Mention Mockup">
+                    </div>
+                    <span class="mockup-caption">Ticket mention view (click to enlarge)</span>
+                </div>
+            </div>
+
             <p>The goal was not aesthetic refresh, but <strong>usability</strong> and <strong>operational clarity</strong>.</p>
             <!-- ditahan dulu konten stats -->
             <!-- <div class="cs-stats">
@@ -217,13 +262,75 @@
             <p>These improvements helped the platform better support day-to-day operations without disrupting existing workflows.</p>
         </section>
 
+        <!-- 8. Key Takeaway -->
+        <section class="cs-section">
+            <h2>Key Takeaway</h2>
+            <p>This project reflects my approach to enterprise product design:</p>
+        
+            <ul class="cs-list">
+                <li>System-first thinking</li>
+                <li>Designing new feature flows within real technical constraints</li>
+                <li>Respect for existing constraints</li>
+                <li>Design as a tool for clarity and alignment</li>
+            </ul>
+
+            <p>Rather than showcasing a textbook UX process, this case study demonstrates the ability to work effectively within real, complex product environments.</p>
+        </section>
+
         <!-- Navigation Footer -->
         <div class="cs-footer-nav">
             <a href="index.html">← Back to Home</a>
         </div>
 
     </main>
-    <!-- Add this line at the bottom -->
+    
+    <!-- Image Modal/Lightbox -->
+    <div id="imageModal" class="image-modal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeImageModal()">&times;</span>
+            <img id="modalImage" src="" alt="Zoomed Image">
+        </div>
+    </div>
+
+    <!-- Modal & Script -->
     <script src="script.js"></script>
+    <script>
+        // Open modal when image is clicked
+        function openImageModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            modalImg.src = imageSrc;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        }
+
+        // Close modal
+        function closeImageModal() {
+            const modal = document.getElementById('imageModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = 'auto'; // Allow scrolling
+        }
+
+        // Close modal when clicking outside image
+        document.getElementById('imageModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeImageModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeImageModal();
+            }
+        });
+
+        // Add click handlers to images in .cs-image-block.clickable
+        document.querySelectorAll('.cs-image-block.clickable img').forEach(img => {
+            img.addEventListener('click', function() {
+                openImageModal(this.src);
+            });
+        });
+    </script>
 </body>
 </html>

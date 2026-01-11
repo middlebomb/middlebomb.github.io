@@ -148,6 +148,26 @@
     gap: 20px;
 }
 
+/* 2x2 Grid for 4 Images - Featured Layout */
+.cs-grid-2x2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    margin: 60px 0;
+}
+
+/* First image takes full width at top */
+.cs-grid-2x2 .cs-image-block:first-child {
+    grid-column: 1 / -1;
+}
+
+/* Other images smaller below */
+.cs-grid-2x2 .cs-image-block:nth-child(2),
+.cs-grid-2x2 .cs-image-block:nth-child(3),
+.cs-grid-2x2 .cs-image-block:nth-child(4) {
+    grid-column: span 1;
+}
+
 /* Two-Column Content Layout (for side-by-side text and lists) */
 .cs-content-2col {
     display: grid;
@@ -167,6 +187,58 @@
 
 .cs-content-2col .cs-list {
     margin-bottom: 0;
+}
+
+/* Large mockup area for dashboard / ticket list */
+.cs-mockup-large {
+    margin: 70px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.cs-mockup-large .mockup-box {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    background: #ffffff;
+    border-radius: 14px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.cs-mockup-large .mockup-box img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+}
+
+@media (max-width: 1024px) {
+    .cs-mockup-large .mockup-box { padding: 18px; max-width: 900px; }
+}
+
+@media (max-width: 768px) {
+    .cs-mockup-large .mockup-box { padding: 12px; max-width: 100%; }
+}
+
+/* Mockup title & caption styling */
+.mockup-wrapper { text-align: center; width: 100%; }
+.mockup-title {
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+    color: #111;
+    font-weight: 600;
+}
+.mockup-caption {
+    display: block;
+    margin-top: 12px;
+    color: #4a4a4a; /* slightly darker for better contrast */
+    font-size: 0.95rem;
+    font-style: italic;
 }
 
 /* Stats Section */
@@ -214,6 +286,74 @@
     .cs-hero h1 { font-size: 2.5rem; }
     .cs-meta-grid { flex-direction: column; gap: 20px; text-align: center; }
     .cs-grid-2 { grid-template-columns: 1fr; }
+    .cs-grid-2x2 { grid-template-columns: 1fr; }
+    .cs-grid-2x2 .cs-image-block:first-child { grid-column: 1; }
     .cs-content-2col { grid-template-columns: 1fr; gap: 20px; }
     .cs-stats { flex-direction: column; }
+}
+
+/* --- MODAL/LIGHTBOX STYLING --- */
+.image-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 3000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: auto;
+}
+
+.image-modal.active {
+    display: flex;
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 90vw;
+    max-height: 90vh;
+    margin: auto;
+}
+
+.modal-content img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 36px;
+    cursor: pointer;
+    font-weight: 300;
+    transition: color 0.3s ease;
+    z-index: 3001;
+}
+
+.modal-close:hover {
+    color: #ccc;
+}
+
+/* Make images clickable */
+.cs-image-block.clickable img {
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 12px;
+}
+
+.cs-image-block.clickable img:hover {
+    opacity: 0.7;
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
