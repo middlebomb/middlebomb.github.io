@@ -82,6 +82,16 @@ h1 strong {
     color: #111;
 }
 
+/* --- TEXT JUSTIFICATION UTILITY --- */
+/* Apply to any paragraph: class="text-justify" */
+.text-justify {
+    text-align: justify;
+    text-justify: inter-word;
+    -webkit-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+}
+
 /* Right Side (Image) */
 .content-right {
     flex: 1;

@@ -50,13 +50,13 @@
     <header class="cs-hero">
         <div class="cs-container">
             <span class="cs-tag">B2B Platform</span>
-            <h1>Telkomsel Business Partner Platform</h1>
-            <p class="cs-subtitle">Streamlining collaboration between a telecom giant and its partners through a unified digital ecosystem.</p>
+            <h1>Telkomsel Business Partner Platform (BPP)</h1>
+            <p class="cs-subtitle">Improving clarity and usability in an existing enterprise partner system</p>
             
             <div class="cs-meta-grid">
                 <div class="meta-item">
                     <h4>Role</h4>
-                    <p>UI/UX Designer</p>
+                    <p>Product & UX Designer (Enterprise Systems)</p>
                 </div>
                 <div class="meta-item">
                     <h4>Timeline</h4>
@@ -79,20 +79,24 @@
     <!-- Main Content -->
     <main class="cs-body">
         
-        <!-- 1. Overview -->
+        <!-- 1. Context -->
         <section class="cs-section">
-            <h2>01. The Problem</h2>
-            <p>Telkomsel's partners were using disparate systems to manage tickets and communications. This resulted in slow response times, data redundancy, and a confusing user experience. The goal was to centralize these workflows into a single, intuitive dashboard.</p>
+            <h2>01. Context</h2>
+            <p class="text-justify">Telkomsel Business Partner Platform (BPP) is an existing enterprise system used by both external partners and internal operational teams to manage collaboration.</p>
+
+<p class="text-justify">As the platform evolved, workflows and features were added incrementally. While functional, this resulted in fragmented experiences, unclear ownership, and increasing operational complexity.</p>
+
+<p class="text-justify">My role was not to redesign the platform from scratch, but to improve and extend existing workflows, introduce new feature flows, and bring clarity through structured UX and high-fidelity design.</p>
         </section>
 
-        <!-- 2. Research -->
+        <!-- 2. Problem -->
         <section class="cs-section">
-            <h2>02. User Research</h2>
-            <p>We conducted interviews with 15 account managers and 10 partner representatives. The key findings were:</p>
+            <h2>02. The Problem</h2>
+            <p>Through system review and workflow analysis, several core issues became apparent:</p>
             <ul class="cs-list">
-                <li><strong>Fragmented Data:</strong> Users had to open 4 different tabs to complete one task.</li>
-                <li><strong>Lack of Status Updates:</strong> Partners never knew if their tickets were being processed.</li>
-                <li><strong>Visual Clutter:</strong> The legacy system was text-heavy and hard to scan.</li>
+                <li><strong>Fragmented workflows</strong> across different modules made it difficult to track tasks end-to-end</li>
+                <li><strong>Ticket status and ownership</strong> were not always clearly visible</li>
+                <li>The platform was not functioning as a single source of truth</li>
             </ul>
             
             <!-- Placeholder for Research Artifact (Persona or Empathy Map) -->
@@ -102,11 +106,19 @@
             </div>
         </section>
 
-        <!-- 3. Ideation / Wireframing -->
+        <!-- 3. Undertanding the Existing System -->
         <section class="cs-section">
-            <h2>03. Ideation & Wireframes</h2>
-            <p>Based on the research, I created low-fidelity wireframes focusing on a "Task-First" architecture. We prioritized the 'Ticket Status' and 'Quick Actions' on the dashboard.</p>
+            <h2>03. Understanding the Existing System</h2>
+            <p>Instead of conducting standalone user research, the focus was on understanding how the system was actually used in practice.</p>
             
+            <p class="text-justify">This included</p>
+            <ul class="cs-list">
+                <li>Reviewing existing workflows and feature flows</li>
+                <li>Mapping how internal teams and partners interacted with the platform</li>
+                <li>Identifying friction points, bottlenecks, and repeated workarounds</li>
+                <li>Aligning findings through discussions with internal stakeholders</li>
+            </ul>
+            <p>This approach ensured design decisions were grounded in <strong>real operational behavior</strong>, not hypothetical scenarios.</p>
             <div class="cs-grid-2">
                 <div class="cs-image-block">
                     <div class="placeholder-box">Low-Fi Wireframe 1</div>
@@ -117,11 +129,18 @@
             </div>
         </section>
 
-        <!-- 4. High Fidelity Design -->
+        <!-- 4. Design Approach & Flow Improvements -->
         <section class="cs-section">
-            <h2>04. Visual Design</h2>
-            <p>Moving to high-fidelity, we utilized Telkomsel's branding guidelines (red, white, and dark grey) but introduced a cleaner spacing system to reduce cognitive load.</p>
+            <h2>04. Design Approach & Flow Improvements</h2>
+            <p>The design approach prioritized <strong>workflow clarity over visual experimentation.</strong></p>
             
+            <ul class="cs-list">
+                <li>Reviewing existing workflows and feature flows</li>
+                <li>Mapping how internal teams and partners interacted with the platform</li>
+                <li>Identifying friction points, bottlenecks, and repeated workarounds</li>
+                <li>Aligning findings through discussions with internal stakeholders</li>
+            </ul>
+            <p>Low-fidelity explorations were used internally to validate flow logic, followed by <strong>high-fidelity mockups</strong> to communicate decisions clearly across teams.</p>
             <div class="cs-image-block full-width">
                 <!-- Replace with your final UI Shot -->
                 <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1000&auto=format&fit=crop" alt="High Fidelity UI">
@@ -129,11 +148,34 @@
             </div>
         </section>
 
-        <!-- 5. Outcome -->
+        <!-- 5. Prototyping & Visual Design -->
         <section class="cs-section">
-            <h2>05. The Results</h2>
-            <p>Post-launch, we measured the success of the redesign:</p>
-            <div class="cs-stats">
+            <h2>05. Prototyping & Visual Design</h2>
+            <p>High-fidelity prototypes played a critical role in this project.</p>
+            
+            <div class="cs-content-2col">
+                <div>
+                    <p>They were used to:</p>
+                    <ul class="cs-list">
+                        <li>Align product, design, and engineering teams</li>
+                        <li>Validate flow changes before development</li>
+                        <li>Reduce ambiguity in complex workflows</li>
+                    </ul>
+                </div>
+                <div>
+                    <p>Visual design focused on:</p>
+                    <ul class="cs-list">
+                        <li>Clear information hierarchy</li>
+                        <li>Status visibility and feedback</li>
+                        <li>Reducing cognitive load in data-heavy views</li>
+                        <li>Consistency within Telkomsel's existing design language</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <p>The goal was not aesthetic refresh, but <strong>usability</strong> and <strong>operational clarity</strong>.</p>
+            <!-- ditahan dulu konten stats -->
+            <!-- <div class="cs-stats">
                 <div class="stat-box">
                     <strong>40%</strong>
                     <span>Faster Ticket Resolution</span>
@@ -142,7 +184,37 @@
                     <strong>+25%</strong>
                     <span>Partner Satisfaction</span>
                 </div>
-            </div>
+            </div> -->
+        </section>
+
+        <!-- 6. Outcomes & Impact -->
+        <section class="cs-section">
+            <h2>06. Outcomes & Impact</h2>
+            <p>Rather than focusing on numerical metrics, the impact of the work was observed at a <strong>system level</strong>:</p>
+            
+            <ul class="cs-list">
+                <li>Improved clarity in ticket status and ownership</li>
+                <li>Better alignment between internal teams and partners</li>
+                <li>Reduced operational confusion</li>
+                <li>The platform moved closer to being a single source of truth for partner collaboration</li>
+            </ul>
+
+            <p>These improvements helped the platform better support day-to-day operations without disrupting existing workflows.</p>
+        </section>
+
+        <!-- 7. Contributions -->
+        <section class="cs-section">
+            <h2>07. Contributions</h2>
+            <p>As a Product & UX Designer working on an enterprise system, my contributions included::</p>
+            
+            <ul class="cs-list">
+                <li>Translating complex, existing workflows into usable interface improvements</li>
+                <li>Designing new feature flows within real technical constraints</li>
+                <li>Creating high-fidelity prototypes to support stakeholder alignment</li>
+                <li>Supporting product and engineering teams through clear design decisions</li>
+            </ul>
+
+            <p>These improvements helped the platform better support day-to-day operations without disrupting existing workflows.</p>
         </section>
 
         <!-- Navigation Footer -->
