@@ -411,3 +411,43 @@
     transform: scale(1.02);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
+
+.exploration-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "chess linkedin"
+    "steam steam";
+  gap: 24px;
+}
+
+.card.chess {
+  grid-area: chess;
+}
+
+.card.linkedin {
+  grid-area: linkedin;
+}
+
+.card.steam {
+  grid-area: steam;
+}
+
+.card.steam {
+  min-height: 420px;
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+}
+
+@media (max-width: 768px) {
+  .exploration-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "chess"
+      "linkedin"
+      "steam";
+  }
+}
